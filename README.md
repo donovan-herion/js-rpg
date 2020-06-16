@@ -1,38 +1,44 @@
-
-
 ## The stats
 
+<summary>GAME SETUP</summary>
 
-<summary>Game example</summary>
-
-
-| ITEMS | Boots                            | Staff                  | Sword           | Bow                   |
-|-------|----------------------------------|------------------------|-----------------|-----------------------|
-|       | Attack accuracy++                | Healing++              | Attack Damages++| Attacks available++   |
+| **Persos** | Sangoku            | Vegeta             | Piccolo            | Freezer            |
+| ---------- | ------------------ | ------------------ | ------------------ | ------------------ |
+|            | Att 80% / Def 120% | Att 80% / Def 120% | Att 70% / Def 130% | Att 115% / Def 90% |
 
 <br>
 
-| RACE | Humans        | Orcs          | Elves            | Vampires                     |
-|------|---------------|---------------|------------------|------------------------------|
-|      | Health--      | Health++      | Mirror attacks++ | Health Stealer++             |
+| **Pouvoirs** | Attaque | Défense | Teleportation  | Aleatoire  |
+| ------------ | ------- | ------- | -------------- | ---------- |
+|              | +20%    | +20%    | 1/3 attaque +- | Att/Def/Tel|
 
-In the `character.js` file, you can define what effects will take place on certain events.
-If the player is an orc and if he/she has boots, the stats will **take effect straight on creation**.
+<br>
 
+| **Attaques** | Sangoku    | Vegeta     | Piccolo          | Freezer      |
+| ------------ | ---------- | ---------- | ---------------- | ------------ |
+|              | Coup       | Coup       | Coup             | Coup         |
+|  Aleatoire   | Kamehameha | Kamehameha | Aibimu           | Mafuba       |
+|              | Genkidama  | Final Flah | Rayon de la mort | Makankosappo |
 
+<br>
+
+| **Regeneration** | Sangoku | Vegeta | Piccolo | Freezer |
+| ---------------- | ------- | ------ | ------- | ------- |
+|                  | +10%    | +10%   | +10%    | +10%    |
+|    Aleatoire     | +20%    | +20%   | +20%    | +20%    |
+|                  | +30%    | +30%   | +30%    | +30%    |
 
 ## Journey 1 - Player 1
-
 
 **Challenge 1:**
 
 Create an HTML page with the following elements included:
 
-* A title.
-* An element to display both characters stats (visual, name, item, health...) [Something like a VS screen](https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/2050964/910/607/m1/fpnw/wm0/sample8-.jpg?1482262310&s=b524ce6f06ee59486cfa7ffa7a78ad99)
-* A panel with 6 buttons, 3 for each player (hit, heal & yield. Those are the moves.)
-* A creation panel with inputs & dropdowns to create your character. (For now only name, items and race )
-* A log that will tell you which move the player made.
+- A title.
+- An element to display both characters stats (visual, name, item, health...) [Something like a VS screen](https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/2050964/910/607/m1/fpnw/wm0/sample8-.jpg?1482262310&s=b524ce6f06ee59486cfa7ffa7a78ad99)
+- A panel with 6 buttons, 3 for each player (hit, heal & yield. Those are the moves.)
+- A creation panel with inputs & dropdowns to create your character. (For now only name, items and race )
+- A log that will tell you which move the player made.
 
 **Challenge 2:**
 
@@ -57,9 +63,6 @@ Make use of max-health and currentHealth.
 Randomize the healing and attack function.
 
 **Great! Now proceed.**
-
-
-
 
 ## Journey 2 - Player 2
 
@@ -93,13 +96,7 @@ Make it so the function uses a random number between the minHealing and maxHeali
 
 **Note:** The `currentHealth` should **NEVER** go above the `maxHealth`
 
-
-
 **Great! Now proceed**
-
-
-
-
 
 ## The Boss
 
@@ -107,16 +104,14 @@ We are almost finished. There are still some things to tackle.
 
 Here is a list of what you should work out:
 
-* Combine the code + html for some 'working result'.
-* Inputs should generate the characters stats.
-* Work out the attack function (Almost the same as heal but it has to hit the enemy).
-* When a player loses, display a victory message & a loose message for each player.
-* At the end of the game, you should be able to restart the game to create a new character.
-
+- Combine the code + html for some 'working result'.
+- Inputs should generate the characters stats.
+- Work out the attack function (Almost the same as heal but it has to hit the enemy).
+- When a player loses, display a victory message & a loose message for each player.
+- At the end of the game, you should be able to restart the game to create a new character.
 
 ## The final encounter
 
-* Style this arena to your taste.
-* Add extra functions. (Keep it appropriate.)
-* Prepare to present your work.
-
+- Style this arena to your taste.
+- Add extra functions. (Keep it appropriate.)
+- Prepare to present your work.

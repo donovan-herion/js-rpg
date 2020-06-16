@@ -1,0 +1,23 @@
+{
+  "name": "js-rpg",
+  "version": "1.0.0",
+  "description": "<summary>GAME SETUP</summary>",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass --watch assets/scss -o assets/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donovan-herion/js-rpg.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donovan-herion/js-rpg/issues"
+  },
+  "homepage": "https://github.com/donovan-herion/js-rpg#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
