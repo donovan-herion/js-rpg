@@ -8,9 +8,9 @@
 
 <br>
 
-| **Pouvoirs** | Attaque | Défense | Teleportation  | Aleatoire |
-| ------------ | ------- | ------- | -------------- | --------- |
-|              | +20%    | +20%    | 1/3 attaque +- | Mafuba    |
+| **Pouvoirs** | Attaque | Défense | Teleportation  | Aleatoire  |
+| ------------ | ------- | ------- | -------------- | ---------- |
+|              | +20%    | +20%    | 1/3 attaque +- | Att/Def/Tel|
 
 <br>
 
