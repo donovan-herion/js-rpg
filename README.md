@@ -16,17 +16,17 @@
 
 | **Attaques** | Sangoku    | Vegeta     | Piccolo          | Freezer      |
 | ------------ | ---------- | ---------- | ---------------- | ------------ |
-| Aleatoire    | Coup       | Coup       | Coup             | Coup         |
-|              | Kamehameha | Kamehameha | Aibimu           | Mafuba       |
+|              | Coup       | Coup       | Coup             | Coup         |
+|  Aleatoire   | Kamehameha | Kamehameha | Aibimu           | Mafuba       |
 |              | Genkidama  | Final Flah | Rayon de la mort | Makankosappo |
 
 <br>
 
 | **Regeneration** | Sangoku | Vegeta | Piccolo | Freezer |
 | ---------------- | ------- | ------ | ------- | ------- |
-| Aleatoire        | +10%    | +10%   | +10%    | +10%    |
-| Aleatoire        | +20%    | +20%   | +20%    | +20%    |
-| Aleatoire        | +30%    | +30%   | +30%    | +30%    |
+|                  | +10%    | +10%   | +10%    | +10%    |
+|    Aleatoire     | +20%    | +20%   | +20%    | +20%    |
+|                  | +30%    | +30%   | +30%    | +30%    |
 
 ## Journey 1 - Player 1
 
