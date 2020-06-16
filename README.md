@@ -28,7 +28,7 @@
 |    Aleatoire     | +20%    | +20%   | +20%    | +20%    |
 |                  | +30%    | +30%   | +30%    | +30%    |
 
-## Journey 1 - Player 1
+## First step
 
 **Challenge 1:**
 
@@ -64,7 +64,10 @@ Randomize the healing and attack function.
 
 **Great! Now proceed.**
 
-## Journey 2 - Player 2
+
+
+
+## Second Step
 
 **Challenge 1:**
 
