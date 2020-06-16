@@ -1,4 +1,4 @@
-
+### This is a 
 
 ## The stats
 
@@ -6,9 +6,9 @@
 <summary>Game example</summary>
 
 
-| ITEMS | Boots                            | Staff                  | Sword           | Bow                   |
-|-------|----------------------------------|------------------------|-----------------|-----------------------|
-|       | Attack accuracy++                | Healing++              | Attack Damages++| Attacks available++   |
+| ITEMS | Boots                            | Staff         | Sword           | Bow                   |
+|-------|----------------------------------|---------------|-----------------|-----------------------|
+|       | Attack accuracy++                | Healing++     | Attack Damages++| Attacks available++   |
 
 <br>
 
@@ -21,7 +21,7 @@ If the player is an orc and if he/she has boots, the stats will **take effect st
 
 
 
-## Journey 1 - Player 1
+## First step
 
 
 **Challenge 1:**
@@ -61,7 +61,7 @@ Randomize the healing and attack function.
 
 
 
-## Journey 2 - Player 2
+## Second Step
 
 **Challenge 1:**
 
