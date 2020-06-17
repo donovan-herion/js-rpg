@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <title>DBZ - Fusion</title>
 </head>
+
 <body>
     <header>
         <h1>DBZ - Fusion</h1>
@@ -26,6 +28,7 @@
                 <option value="Intouchable 30%">Intouchable 30%</option>
                 <option value="Aleatoire">Aleatoire</option>
             </select>
+            <img src="assets/images/questionmark.png" class="image-left" alt="image-pouvoir">
         </section>
         <section class="sub-flex right">
             <select class="persos" id="liste-persos2">
@@ -41,10 +44,11 @@
                 <option value="Défense 120%">Défense 120%</option>
                 <option value="Intouchable 30%">Intouchable 30%</option>
                 <option value="Aleatoire">Aleatoire</option>
-            </section>
-        </select>
+            </select>
+            <img src="assets/images/tele.png" class="image-right" alt="image-pouvoir">
+        </section>
     </div>
-    <button id="run">Lancer la partie</button>
+    <button id="run" onclick="window.location.href='/index-game'">Lancer la partie</button>
     <script src="./assets/js/gamelogic.js"></script>
     <script src="./assets/js/character.js"></script>
     </body>

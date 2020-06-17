@@ -1,3 +1,5 @@
+//Character choice picture update
+
 const leftSection = document.querySelector(".left")
 const rightSection = document.querySelector(".right")
 
@@ -18,12 +20,12 @@ chosenCharacter1.addEventListener("change", () => {
         case 'Freezer':
             leftSection.style.backgroundImage = 'url(../assets/images/freezer.png)'
             break;
-
-        default:
-            leftSection.style.backgroundImage = 'url(../assets/images/wireframe.png)'
-            break;
-    }
-})
+            
+            default:
+                leftSection.style.backgroundImage = 'url(../assets/images/wireframe.png)'
+                break;
+            }
+    })
 
 chosenCharacter2.addEventListener("change", () => {
     switch (chosenCharacter2.value) {
@@ -39,13 +41,79 @@ chosenCharacter2.addEventListener("change", () => {
         case 'Freezer':
             rightSection.style.backgroundImage = 'url(../assets/images/freezer.png)'
             break;
+            
+            default:
+                rightSection.style.backgroundImage = 'url(../assets/images/wireframe.png)'
+                break;
+            }
+    })
+    
 
-        default:
-            rightSection.style.backgroundImage = 'url(../assets/images/wireframe.png)'
-            break;
-    }
-})
+    const leftImage = document.querySelector(".image-left")
+    const rightImage = document.querySelector(".image-right")
+    
+    const chosenPower1 = document.getElementById('liste-pouvoirs1')
+    const chosenPower2 = document.getElementById('liste-pouvoirs2')
 
+    chosenPower2.addEventListener("change", () => {
+        switch (chosenPower2.value) {
+            case 'Attaque 120%':
+                rightImage.src = 'assets/images/fist.png'
+                console.log('worked')
+                break;
+            case 'Défense 120%':
+                rightImage.src = 'assets/images/stop.png'
+                console.log('worked')
+
+                break;
+            case 'Intouchable 30%':
+                rightImage.src = 'assets/images/tele.png'
+                console.log('worked')
+
+                break;
+            case 'Aleatoire':
+                rightImage.src = 'assets/images/questionmark.png'
+                console.log('worked')
+
+                break;
+                
+            default:
+                rightSection.style.backgroundImage = 'url(../assets/images/wireframe.png)'
+                console.log('worked')
+
+                break;
+            }
+        })
+    
+    chosenPower1.addEventListener("change", () => {
+        switch (chosenPower1.value) {
+            case 'Attaque 120%':
+                leftImage.src = 'assets/images/fist.png'
+                console.log('worked')
+                break;
+            case 'Défense 120%':
+                leftImage.src = 'assets/images/stop.png'
+                console.log('worked')
+
+                break;
+            case 'Intouchable 30%':
+                leftImage.src = 'assets/images/tele.png'
+                console.log('worked')
+
+                break;
+            case 'Aleatoire':
+                leftImage.src = 'assets/images/questionmark.png'
+                console.log('worked')
+
+                break;
+                
+            default:
+                leftSection.style.backgroundImage = 'url(../assets/images/wireframe.png)'
+                console.log('worked')
+
+                break;
+            }
+        })
 
 
 //Use this script to generate your character
@@ -68,4 +136,6 @@ function Person(heroes, power) {
     this.displayChar = function () {
         return console.log(`I am a ${this.heroes}, I wield a ${this.power}, my total health point are ${this.maxHealth}`);
     };
-};
+}
+console.log(Person);
+
