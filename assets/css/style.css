@@ -20,13 +20,13 @@ header {
 
 .left {
   background-image: url(../images/wireframe.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center; }
 
 .right {
   background-image: url(../images/wireframe.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center; }
 
