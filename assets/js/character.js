@@ -140,6 +140,9 @@ function Person(heroes, power) {
 console.log(Person);
 
 let btn = document.getElementById('run')
+let disapear = document.querySelector('.disapear')
+let appear = document.querySelector('.appear')
 btn.addEventListener("click", () => {
-    
+    disapear.style.display = 'none'
+    appear.style.display = 'block'
 })

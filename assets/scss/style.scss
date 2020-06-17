@@ -1,15 +1,14 @@
-body {
-    position: relative;
+@font-face{font-family: "DBZ"; src: url("../font/Saiyan-Sans.ttf"); }
+
+
+h1 {
+    text-align: center;
+    margin: 0 auto;
+    padding: 5vh 0 0;
+    font-family: "DBZ";
+    font-size: 60px;
 }
 
-header {
-    width: 100%;
-    h1 {
-        text-align: center;
-        margin: 0 auto;
-        padding: 5vh 0;
-    }
-}
 
 .flex-container {
     height: 70vh;
@@ -63,6 +62,7 @@ button {
     border: solid 2px black;
     background-color: #333;
     cursor: pointer;
+    font-family: DBZ;
 }
 
 .image-left {
@@ -79,4 +79,8 @@ button {
     left: 3vw;
     bottom: 45vh;
     border-radius: 50%;
+}
+
+.appear {
+    display: none;
 }
