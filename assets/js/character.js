@@ -1,5 +1,3 @@
-//Character choice picture update
-
 const leftSection = document.querySelector(".left")
 const rightSection = document.querySelector(".right")
 
@@ -20,12 +18,12 @@ chosenCharacter1.addEventListener("change", () => {
         case 'Freezer':
             leftSection.style.backgroundImage = 'url(../assets/images/freezer.png)'
             break;
-            
-            default:
-                leftSection.style.backgroundImage = 'url(../assets/images/wireframe.png)'
-                break;
-            }
-    })
+
+        default:
+            leftSection.style.backgroundImage = 'url(../assets/images/wireframe.png)'
+            break;
+    }
+})
 
 chosenCharacter2.addEventListener("change", () => {
     switch (chosenCharacter2.value) {
@@ -41,12 +39,12 @@ chosenCharacter2.addEventListener("change", () => {
         case 'Freezer':
             rightSection.style.backgroundImage = 'url(../assets/images/freezer.png)'
             break;
-            
-            default:
-                rightSection.style.backgroundImage = 'url(../assets/images/wireframe.png)'
-                break;
-            }
-    })
+
+        default:
+            rightSection.style.backgroundImage = 'url(../assets/images/wireframe.png)'
+            break;
+    }
+})
 
 
 
@@ -70,50 +68,4 @@ function Person(heroes, power) {
     this.displayChar = function () {
         return console.log(`I am a ${this.heroes}, I wield a ${this.power}, my total health point are ${this.maxHealth}`);
     };
-}
-console.log(Person);
-
-// (() => {
-
-//     class Personage {
-//         constructor(firstname){
-//             this.firstname = firstname;
-        
-//         }
-    
-//         set name(text){
-//             let arr_nam = text.split(" ");
-//             this.firstname = arr_nam[0];
-           
-//         }
-//         get name(){
-//             return `${this.firstname} `;
-//         }
-//     }
-   
-//         let goku = new Personage("Goku")
-       
-//         console.log(goku.name);
-    
-//         goku.name = "Songoku";
-//         console.log(goku.name);
-   
-    
-//     })();
-
-
-
-//     const perso = {
-//         set current(name) {
-//           this.log.push(name);
-//         },
-//         log: []
-//       };
-      
-//       perso.current = 'Songoku';
-//       perso.current = 'Vegeta';
-//       perso.current = 'Frezzer';
-//       perso.current = 'Picoolo';
-      
-//       console.log(perso.log);
-     
+};
