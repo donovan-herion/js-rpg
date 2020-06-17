@@ -2,6 +2,8 @@
 
 const leftSection = document.querySelector(".left")
 const rightSection = document.querySelector(".right")
+const secondLeftSection = document.querySelector(".second-left")
+const secondRightSection = document.querySelector(".second-right")
 
 const chosenCharacter1 = document.getElementById('liste-persos1')
 const chosenCharacter2 = document.getElementById('liste-persos2')
@@ -9,20 +11,27 @@ const chosenCharacter2 = document.getElementById('liste-persos2')
 chosenCharacter1.addEventListener("change", () => {
     switch (chosenCharacter1.value) {
         case 'Sangoku':
-            leftSection.style.backgroundImage = 'url(../assets/images/sangoku.png)'
+            leftSection.style.backgroundImage = 'url(assets/images/sangoku.png)'
+            secondLeftSection.style.backgroundImage = 'url(assets/images/sangoku.png)'
             break;
         case 'Vegeta':
-            leftSection.style.backgroundImage = 'url(../assets/images/vegeta.png)'
+            leftSection.style.backgroundImage = 'url(assets/images/vegeta.png)'
+            secondLeftSection.style.backgroundImage = 'url(assets/images/vegeta.png)'
+
             break;
         case 'Picollo':
-            leftSection.style.backgroundImage = 'url(../assets/images/picollo.png)'
+            leftSection.style.backgroundImage = 'url(assets/images/picollo.png)'
+            secondLeftSection.style.backgroundImage = 'url(assets/images/picollo.png)'
+
             break;
         case 'Freezer':
-            leftSection.style.backgroundImage = 'url(../assets/images/freezer.png)'
+            leftSection.style.backgroundImage = 'url(assets/images/freezer.png)'
+            secondLeftSection.style.backgroundImage = 'url(assets/images/freezer.png)'
+
             break;
             
             default:
-                leftSection.style.backgroundImage = 'url(../assets/images/wireframe.png)'
+                leftSection.style.backgroundImage = 'url(assets/images/wireframe.png)'
                 break;
             }
     })
@@ -30,20 +39,24 @@ chosenCharacter1.addEventListener("change", () => {
 chosenCharacter2.addEventListener("change", () => {
     switch (chosenCharacter2.value) {
         case 'Sangoku':
-            rightSection.style.backgroundImage = 'url(../assets/images/sangoku.png)'
+            rightSection.style.backgroundImage = 'url(assets/images/sangoku.png)'
+            secondRightSection.style.backgroundImage = 'url(assets/images/sangoku.png)'
             break;
         case 'Vegeta':
-            rightSection.style.backgroundImage = 'url(../assets/images/vegeta.png)'
+            rightSection.style.backgroundImage = 'url(assets/images/vegeta.png)'
+            secondRightSection.style.backgroundImage = 'url(assets/images/vegeta.png)'
             break;
         case 'Picollo':
-            rightSection.style.backgroundImage = 'url(../assets/images/picollo.png)'
+            rightSection.style.backgroundImage = 'url(assets/images/picollo.png)'
+            secondRightSection.style.backgroundImage = 'url(assets/images/picollo.png)'
             break;
         case 'Freezer':
-            rightSection.style.backgroundImage = 'url(../assets/images/freezer.png)'
+            rightSection.style.backgroundImage = 'url(assets/images/freezer.png)'
+            secondRightSection.style.backgroundImage = 'url(assets/images/freezer.png)'
             break;
             
             default:
-                rightSection.style.backgroundImage = 'url(../assets/images/wireframe.png)'
+                rightSection.style.backgroundImage = 'url(assets/images/wireframe.png)'
                 break;
             }
     })

@@ -1,3 +1,5 @@
+[Link to the site](https://donovan-herion.github.io/js-rpg/)
+
 ## The stats
 
 <summary>GAME SETUP</summary>

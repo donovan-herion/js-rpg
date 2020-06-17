@@ -24,14 +24,17 @@ h1 {
 }
 
 .flex-container2 {
-    height: 20vh;
+    height: 10vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: flex-end;
 
     .flex-btn {
         display: flex;
+        width: 50%;
+        justify-content: center;
         button {
+            width: 100px;
             margin: 0 12px;
         }
     }
@@ -43,6 +46,13 @@ h1 {
     margin-top: 2%;
     padding-top: 2%;
     padding-bottom: 2%;
+}
+.progress {
+    width: 300px;
+    padding: 2px;
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
 }
 
 .sub-flex {
@@ -111,4 +121,14 @@ button {
 
 .appear {
     display: none;
+}
+.second-left {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.second-right {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
 }
