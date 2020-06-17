@@ -9,27 +9,28 @@
 </head>
 
 <body>
-    <header>
-        <h1>DBZ - Fusion</h1>
-    </header>
-    <div class="flex-container">
-        <section class="sub-flex left">
-            <select class="persos" id="liste-persos1">
-                <option value="" disabled selected hidden>Choisir personnage</option>
-                <option value="Sangoku">Sangoku</option>
-                <option value="Vegeta">Vegeta</option>
-                <option value="Picollo">Picollo</option>
-                <option value="Freezer">Freezer</option>
-            </select>
-            <select class="pouvoirs" id="liste-pouvoirs1">
-                <option value="" disabled selected hidden>Choisir pouvoir</option>
-                <option value="Attaque 120%">Attaque 120%</option>
-                <option value="Défense 120%">Défense 120%</option>
-                <option value="Intouchable 30%">Intouchable 30%</option>
-                <option value="Aleatoire">Aleatoire</option>
-            </select>
-            <img src="assets/images/questionmark.png" class="image-left" alt="image-pouvoir">
-        </section>
+    <div class="disapear">
+        <header>
+            <h1>DBZ - Fusion</h1>
+        </header>
+        <div class="flex-container">
+            <section class="sub-flex left">
+                <select class="persos" id="liste-persos1">
+                    <option value="" disabled selected hidden>Choisir personnage</option>
+                    <option value="Sangoku">Sangoku</option>
+                    <option value="Vegeta">Vegeta</option>
+                    <option value="Picollo">Picollo</option>
+                    <option value="Freezer">Freezer</option>
+                </select>
+                <select class="pouvoirs" id="liste-pouvoirs1">
+                    <option value="" disabled selected hidden>Choisir pouvoir</option>
+                    <option value="Attaque 120%">Attaque 120%</option>
+                    <option value="Défense 120%">Défense 120%</option>
+                    <option value="Intouchable 30%">Intouchable 30%</option>
+                    <option value="Aleatoire">Aleatoire</option>
+                </select>
+                <img src="assets/images/questionmark.png" class="image-left" alt="image-pouvoir">
+            </section>
         <section class="sub-flex right">
             <select class="persos" id="liste-persos2">
                 <option value="" disabled selected hidden>Choisir personnage</option>
@@ -48,8 +49,10 @@
             <img src="assets/images/tele.png" class="image-right" alt="image-pouvoir">
         </section>
     </div>
-    <button id="run" onclick="window.location.href='/index-game.html'">Lancer la partie</button>
+    <button id="run">Lancer la partie</button>
+</div>
     <script src="./assets/js/gamelogic.js"></script>
     <script src="./assets/js/character.js"></script>
     </body>
     </html>
+    

@@ -139,47 +139,7 @@ function Person(heroes, power) {
 }
 console.log(Person);
 
-// (() => {
-
-//     class Personage {
-//         constructor(firstname){
-//             this.firstname = firstname;
-        
-//         }
+let btn = document.getElementById('run')
+btn.addEventListener("click", () => {
     
-//         set name(text){
-//             let arr_nam = text.split(" ");
-//             this.firstname = arr_nam[0];
-           
-//         }
-//         get name(){
-//             return `${this.firstname} `;
-//         }
-//     }
-   
-//         let goku = new Personage("Goku")
-       
-//         console.log(goku.name);
-    
-//         goku.name = "Songoku";
-//         console.log(goku.name);
-   
-    
-//     })();
-
-
-
-//     const perso = {
-//         set current(name) {
-//           this.log.push(name);
-//         },
-//         log: []
-//       };
-      
-//       perso.current = 'Songoku';
-//       perso.current = 'Vegeta';
-//       perso.current = 'Frezzer';
-//       perso.current = 'Picoolo';
-      
-//       console.log(perso.log);
-     
+})
