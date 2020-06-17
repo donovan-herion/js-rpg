@@ -117,23 +117,69 @@ chosenCharacter2.addEventListener("change", () => {
 
 
 //Use this script to generate your character
-function Person(race,item){
-    this.race = race;
-    this.item = item;
+function Person(heroes, power) {
+    this.heroes = heroes;
+    this.power = power;
     this.currenthealth = 100;
     this.maxHealth = 100;
-    
+
     this.min = 3;
     this.maxDamage = 20;
     this.maxHealing = 30;
 
-    this.heal = function(){};
+    this.heal = function () { };
 
-    this.damage = function(){};
+    this.damage = function () { };
 
     this.totalDamage = this.damage();
 
-    this.displayChar = function(){
-        return console.log(`I am a ${this.race}, I wield a ${this.item}, my total health point are ${this.maxHealth}`);
+    this.displayChar = function () {
+        return console.log(`I am a ${this.heroes}, I wield a ${this.power}, my total health point are ${this.maxHealth}`);
     };
 }
+console.log(Person);
+
+// (() => {
+
+//     class Personage {
+//         constructor(firstname){
+//             this.firstname = firstname;
+        
+//         }
+    
+//         set name(text){
+//             let arr_nam = text.split(" ");
+//             this.firstname = arr_nam[0];
+           
+//         }
+//         get name(){
+//             return `${this.firstname} `;
+//         }
+//     }
+   
+//         let goku = new Personage("Goku")
+       
+//         console.log(goku.name);
+    
+//         goku.name = "Songoku";
+//         console.log(goku.name);
+   
+    
+//     })();
+
+
+
+//     const perso = {
+//         set current(name) {
+//           this.log.push(name);
+//         },
+//         log: []
+//       };
+      
+//       perso.current = 'Songoku';
+//       perso.current = 'Vegeta';
+//       perso.current = 'Frezzer';
+//       perso.current = 'Picoolo';
+      
+//       console.log(perso.log);
+     
