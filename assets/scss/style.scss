@@ -28,12 +28,21 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
+
     .flex-btn {
         display: flex;
         button {
             margin: 0 12px;
         }
     }
+}
+
+.ActionRealiser {
+    border: solid 5px red;
+    text-align: center;
+    margin-top: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 .sub-flex {
@@ -45,14 +54,14 @@ h1 {
 }
 
 .left {
-    background-image: url(../images/wireframe.png);
+    background-image: none;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 .right {
-    background-image: url(../images/wireframe.png);
+    background-image: none;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;

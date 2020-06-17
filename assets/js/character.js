@@ -78,7 +78,7 @@ chosenCharacter2.addEventListener("change", () => {
                 break;
                 
             default:
-                rightSection.style.backgroundImage = 'url(../assets/images/wireframe.png)'
+                rightSection.style.backgroundImage = 'none'
                 console.log('worked')
 
                 break;
@@ -108,7 +108,7 @@ chosenCharacter2.addEventListener("change", () => {
                 break;
                 
             default:
-                leftSection.style.backgroundImage = 'url(../assets/images/wireframe.png)'
+                leftSection.style.backgroundImage = 'none'
                 console.log('worked')
 
                 break;
