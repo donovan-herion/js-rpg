@@ -130,7 +130,6 @@ chosenPower1.addEventListener("change", () => {
 
 //Log
 let actionBtn = document.querySelectorAll(".log");
-console.log(actionBtn[1])
 
 let message = ["hit1", "heal1", "hit2", "heal2"]
 
@@ -158,6 +157,7 @@ function Person(perso, pouvoir) {
     this.perso = perso
     this.pouvoir = pouvoir
     this.currenthealth = 100
+    this.maxHealth = 100
 
     //coup et heal aleatoires
 
@@ -165,64 +165,127 @@ function Person(perso, pouvoir) {
     this.maxDamage = 20
     this.maxHealing = 30
 
-    //fonction vie et coup 
-    this.heal = function () { }
-    this.damage = function () { }
-    this.totalDamage = this.damage()
+    //fonction dommage 
 
-    
-    this.displayChar = function () {
-        return console.log(`I am a ${this.perso}, I wield a ${this.pouvoir} `)
-
+    this.damage = function (adversaire) {
+        adversaire.currenthealth -= Math.floor(Math.random() * 30);
     }
+
+    // this.totalDamage = this.damage()
+
+    // this.heal = function () {
+
+    //     let heal1 = document.querySelector("#heal1");
+    //     let heal2 = document.querySelector("#heal2");
+    // }
+
+
+    // this.displayChar = function () {
+    //     return console.log(`I am a ${this.perso}, I wield a ${this.pouvoir} `)
+
+    // }
 }
-console.log(Person);
 
+
+let objPerso1 = {};
+let objPerso2 = {};
+
+
+//creation des personnages au clic lancer partie et disparition premiere page
 let btn = document.getElementById('run')
-let disapear = document.querySelector('.disapear')
-let appear = document.querySelector('.appear')
+
 btn.addEventListener("click", () => {
-    disapear.style.display = 'none'
-    appear.style.display = 'block'
-})
-
-
-document.getElementById("run").addEventListener("click", Create);
-///choix du Heroes et de son pouvoir
-function Create() {
     let perso1 = document.getElementById("liste-persos1").value;
     let pouvoir1 = document.getElementById("liste-pouvoirs1").value;
     let perso2 = document.getElementById("liste-persos2").value;
     let pouvoir2 = document.getElementById("liste-pouvoirs2").value;
 
+    if (perso1 != "" && pouvoir1 != "" && perso2 != "" && pouvoir2 != "") {
+        create()
+
+        let disapear = document.querySelector('.disapear')
+        let appear = document.querySelector('.appear')
+
+        disapear.style.display = 'none'
+        appear.style.display = 'block'
+    }
+})
+
+
+
+function create() {
+
+    ///recuperation valeur personage+ pouvoir
+    let perso1 = document.getElementById("liste-persos1").value;
+    let pouvoir1 = document.getElementById("liste-pouvoirs1").value;
+    let perso2 = document.getElementById("liste-persos2").value;
+    let pouvoir2 = document.getElementById("liste-pouvoirs2").value;
     console.log(perso1);
-    console.log(pouvoir1);
-    console.log(perso2);
-    console.log(pouvoir2);
 
-    /// C'est pour la phase combat
+    /// creation personage
+    objPerso1 = new Person(perso1, pouvoir1);
+    objPerso2 = new Person(perso2, pouvoir2);
 
-    hit1 = document.getElementById("hit1");
-    heal1 = document.getElementById("heal1");
-    leave1 = document.getElementById("leave1");
+    /// recuperation bar de vie HTML
+    let bar1 = document.querySelector(".bar1");
+    let bar2 = document.querySelector(".bar2");
 
-    hit2 = document.getElementById("hit2");
-    heal2 = document.getElementById("heal2");
-    leave2 = document.getElementById("leave2");
+
+
+    ///affichage vie
+    bar1.setAttribute("value", "objPerso1.currenthealth");
+    console.log(objPerso1);
+    bar2.setAttribute("value", "objPerso2.currenthealth");
+    console.log(objPerso2);
+
+
 
 }
 
 
-// fonction{
-// prendre la valeur de la vie du personnage;
-// si :
-//      -hit -> enlever vie a l autre perso;
-//     -heal -> regeneration
+//dommage au clic
 
-// }
+let hit1 = document.querySelector("#hit1");
+
+hit1.addEventListener("click", () => {
+    console.log("on reussi")
+    console.log(objPerso1)
+    objPerso2.currenthealth - + Math.floor(Math.random() * 30);
+});
+
+
+let hit2 = document.querySelector("#hit2");
+hit2.addEventListener("click", () => {
+    console.log("on reussi")
+    console.log(objPerso2)
+    objPerso1.currenthealth - + Math.floor(Math.random() * 30);
+});
+
+
+// heal au click
+
+
+
+let heal1 = document.querySelector("#heal1");
+
+heal1.addEventListener("click", () => {
+    console.log("on Res Hral")
+    console.log(objPerso1)
+    objPerso2.currenthealth - + Math.floor(Math.random() * 30);
+});
+
+
+let heal2 = document.querySelector("#heal2");
+heal2.addEventListener("click", () => {
+    console.log("on Res Hral")
+    console.log(objPerso2)
+    objPerso1.currenthealth - + Math.floor(Math.random() * 30);
+});
+
+
+//fonction partir comme un lache
 
 let leaveBtn = document.querySelectorAll(".leave")
-
 
 for (let i = 0; i < leaveBtn.length; i++) {
     leaveBtn[i].addEventListener("click", () => {
@@ -231,4 +294,58 @@ for (let i = 0; i < leaveBtn.length; i++) {
     })
 }
 
+
+//on recupere les boutons de droite et de gauche
+
+let btn1 = document.querySelectorAll(".btn1");
+let btn2 = document.querySelectorAll(".btn2");
+
+//on ecoute les evenements sur les boutons1
+
+for (let i = 0; i < btn1.length; i++) {
+    btn1[i].addEventListener("click", () => {
+        blockLeft()
+    })
+}
+
+function blockLeft() {
+    for (let i = 0; i < btn1.length; i++) {
+        btn2[i].removeAttribute("disabled");
+        btn2[i].style.opacity = 1;
+        btn1[i].setAttribute("disabled", "disabled");
+        btn1[i].style.opacity = 0.3;
+    }
+}
+
+//on ecoute les evenements sur les boutons2
+
+for (let i = 0; i < btn2.length; i++) {
+    btn2[i].addEventListener("click", () => {
+        blockRight()
+    })
+}
+
+function blockRight() {
+    for (let i = 0; i < btn2.length; i++) {
+        btn1[i].removeAttribute("disabled");
+        btn1[i].style.opacity = 1;
+        btn2[i].setAttribute("disabled", "disabled");
+        btn2[i].style.opacity = 0.3;
+    }
+}
+
+
+// console.log(perso1);
+// console.log(pouvoir1);
+// console.log(perso2);
+// console.log(pouvoir2);
+
+
+
+// changer la bare de vie + % de la vie
+//  ->   si mort refreche
+
+// chaque action ecrire dans log-contenaire
+// afficher nom du perso + pouvoir
+// affi
 
