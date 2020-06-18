@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/35db69b170.js" crossorigin="anonymous"></script>
     <title>DBZ - Fusion</title>
 </head>
 
@@ -68,38 +69,33 @@
 
         </div>
         <div class="flex-container2">
-            <progress class="progress" value="10%" max="200">50%</progress> 
-            <progress class="progress" value="10%" max="200">50%</progress> 
+            <progress class="progress" value="4200" max="9000">50%</progress>
+            <progress class="progress" value="4200" max="9000">50%</progress>
         </div>
 
         <div class="flex-container2">
             <section class="flex-btn">
-                <button>Coup</button>
-                <button>Soins</button>
-                <button>Part</button>
+                <button class="log" id="hit1">Hit</button>
+                <button class="log" id="heal1">Heal</button>
+                <button class="leave" id="leave1">Leave <i class="fas fa-sign-out-alt"></i></button>
             </section>
             <section class="flex-btn">
-                <button>Coup</button>
-                <button>Soins</button>
-                <button>Part</button>
+                <button class="log" id="hit2">Hit</button>
+                <button class="log" id="heal2">Heal</button>
+                <button class="leave" id="leave2">Leave <i class="fas fa-sign-out-alt"></i></button>
             </section>
         </div>
 
 
-        <div class="ActionRealiser">
-            joueur 1 Attaque joueur 2<br/>
-            test<br/>
-            joueur 1 Attaque joueur 2<br/>
-            test<br/>
-            joueur 1 Attaque joueur 2<br/>
-            test<br/>
+        <div class="log-container">
 
         </div>
 
 
     </div>
-    <!-- <script src="./assets/js/gamelogic.js"></script> -->
+    <script src="./assets/js/gamelogic.js"></script>
     <script src="assets/js/character.js"></script>
+
 </body>
 
 </html>

@@ -3,6 +3,11 @@
     src: url("../font/Saiyan-Sans.ttf");
 }
 
+body {
+    // background-image: url(https://vignette.wikia.nocookie.net/dragonball/images/2/24/Tenkaichi_Budokai_%28Ar%C3%A8ne_2%29.jpg/revision/latest?cb=20180808225316&path-prefix=fr):
+    background-size: cover;
+}
+
 h1 {
     text-align: center;
     margin: 0 auto;
@@ -34,13 +39,16 @@ h1 {
         width: 50%;
         justify-content: center;
         button {
-            width: 100px;
+            width: 120px;
             margin: 0 12px;
+            li{
+                padding-left: 3px;
+            }
         }
     }
 }
 
-.ActionRealiser {
+.log-container {
     border: solid 5px red;
     text-align: center;
     margin-top: 2%;
@@ -104,7 +112,7 @@ button {
 }
 
 .image-left {
-    position: relative;
+    position: absolute;
     width: 150px;
     left: 35vw;
     bottom: 45vh;
@@ -112,9 +120,9 @@ button {
 }
 
 .image-right {
-    position: relative;
+    position: absolute;
     width: 150px;
-    left: 3vw;
+    right: 35vw;
     bottom: 45vh;
     border-radius: 50%;
 }

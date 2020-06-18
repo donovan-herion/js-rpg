@@ -2,6 +2,9 @@
   font-family: "DBZ";
   src: url("../font/Saiyan-Sans.ttf"); }
 
+body {
+  background-size: cover; }
+
 h1 {
   text-align: center;
   margin: 0 auto;
@@ -31,10 +34,12 @@ h1 {
     width: 50%;
     justify-content: center; }
     .flex-container2 .flex-btn button {
-      width: 100px;
+      width: 120px;
       margin: 0 12px; }
+      .flex-container2 .flex-btn button li {
+        padding-left: 3px; }
 
-.ActionRealiser {
+.log-container {
   border: solid 5px red;
   text-align: center;
   margin-top: 2%;
@@ -91,16 +96,16 @@ button {
   font-family: DBZ; }
 
 .image-left {
-  position: relative;
+  position: absolute;
   width: 150px;
   left: 35vw;
   bottom: 45vh;
   border-radius: 50%; }
 
 .image-right {
-  position: relative;
+  position: absolute;
   width: 150px;
-  left: 3vw;
+  right: 35vw;
   bottom: 45vh;
   border-radius: 50%; }
 
