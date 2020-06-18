@@ -220,7 +220,6 @@ function create() {
     let pouvoir1 = document.getElementById("liste-pouvoirs1").value;
     let perso2 = document.getElementById("liste-persos2").value;
     let pouvoir2 = document.getElementById("liste-pouvoirs2").value;
-    console.log(perso1);
 
     /// creation personage
     objPerso1 = new Person(perso1, pouvoir1);
@@ -233,9 +232,9 @@ function create() {
 
 
     ///affichage vie
-    bar1.setAttribute("value", "objPerso1.currenthealth");
+    bar1.setAttribute("value", objPerso1.currenthealth);
     console.log(objPerso1);
-    bar2.setAttribute("value", "objPerso2.currenthealth");
+    bar2.setAttribute("value", objPerso2.currenthealth);
     console.log(objPerso2);
 
 
@@ -248,38 +247,69 @@ function create() {
 let hit1 = document.querySelector("#hit1");
 
 hit1.addEventListener("click", () => {
-    console.log("on reussi")
-    console.log(objPerso1)
-    objPerso2.currenthealth - + Math.floor(Math.random() * 30);
+    objPerso2.currenthealth -= Math.floor(Math.random() * 20);
+    console.log(objPerso2.currenthealth)
+
+    /// recuperation bar de vie HTML
+    let bar2 = document.querySelector(".bar2");
+
+    ///affichage vie
+    bar2.setAttribute("value", objPerso2.currenthealth);
+
+    console.log(objPerso2);
+
 });
 
 
 let hit2 = document.querySelector("#hit2");
+
 hit2.addEventListener("click", () => {
-    console.log("on reussi")
-    console.log(objPerso2)
-    objPerso1.currenthealth - + Math.floor(Math.random() * 30);
+    objPerso1.currenthealth -= Math.floor(Math.random() * 20);
+    console.log(objPerso1.currenthealth)
+
+    /// recuperation bar de vie HTML
+    let bar1 = document.querySelector(".bar1");
+
+    ///affichage vie
+    bar1.setAttribute("value", objPerso1.currenthealth);
+
+    console.log(objPerso1);
+
 });
 
-
 // heal au click
-
-
 
 let heal1 = document.querySelector("#heal1");
 
 heal1.addEventListener("click", () => {
-    console.log("on Res Hral")
-    console.log(objPerso1)
-    objPerso2.currenthealth - + Math.floor(Math.random() * 30);
+    objPerso1.currenthealth += Math.floor(Math.random() * 30);
+    console.log(objPerso1.currenthealth)
+
+    /// recuperation bar de vie HTML
+    let bar1 = document.querySelector(".bar1");
+
+    ///affichage vie
+    bar1.setAttribute("value", objPerso1.currenthealth);
+
+
+
 });
 
 
 let heal2 = document.querySelector("#heal2");
+
 heal2.addEventListener("click", () => {
-    console.log("on Res Hral")
-    console.log(objPerso2)
-    objPerso1.currenthealth - + Math.floor(Math.random() * 30);
+    objPerso2.currenthealth += Math.floor(Math.random() * 30);
+    console.log(objPerso2.currenthealth)
+
+    /// recuperation bar de vie HTML
+    let bar2 = document.querySelector(".bar2");
+
+    ///affichage vie
+    bar2.setAttribute("value", objPerso2.currenthealth);
+
+ 
+
 });
 
 
