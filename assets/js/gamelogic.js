@@ -258,6 +258,7 @@ hit1.addEventListener("click", () => {
 
     console.log(objPerso2);
 
+
 });
 
 
