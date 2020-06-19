@@ -98,10 +98,10 @@ const chosenPower2 = document.getElementById('liste-pouvoirs2')
 
 chosenPower2.addEventListener("change", () => {
     switch (chosenPower2.value) {
-        case 'Boost Attaque':
+        case 'BoostAttaque':
             rightImage.src = 'assets/images/fist.png'
             break;
-        case 'Boost Vie':
+        case 'BoostVie':
             rightImage.src = 'assets/images/stop.png'
 
             break;
@@ -118,10 +118,10 @@ chosenPower2.addEventListener("change", () => {
 
 chosenPower1.addEventListener("change", () => {
     switch (chosenPower1.value) {
-        case 'Boost Attaque':
+        case 'BoostAttaque':
             leftImage.src = 'assets/images/fist.png'
             break;
-        case 'Boost Vie':
+        case 'BoostVie':
             leftImage.src = 'assets/images/stop.png'
 
             break;
