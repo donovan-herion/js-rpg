@@ -51,6 +51,7 @@ function create() {
 let hit1 = document.querySelector("#hit1");
 
 hit1.addEventListener("click", () => {
+    //objPerso2.perso[perso2].currenthealth -= Math.floor(Math.random() * 20);
 
     /// recuperation bar de vie HTML
     let bar2 = document.querySelector(".bar2");
@@ -65,17 +66,8 @@ hit1.addEventListener("click", () => {
     }
 
 
-    if (perso1 = "Sangoku") {
-        objPerso2.perso[perso2].currenthealth -= Math.floor(Math.random() * 20);
-    }
-    else if (perso1 = "Vegeta") {
-        objPerso2.perso[perso2].currenthealth -= Math.floor(Math.random() * 25);
-    }
-    else if (perso1 = "Picollo") {
-        objPerso2.perso[perso2].currenthealth -= Math.floor(Math.random() * 30);
-    }
-    else if (perso1 = "Freezer") {
-        objPerso2.perso[perso2].currenthealth -= Math.floor(Math.random() * 35);
+    if (perso1="Sangoku"){
+        objPerso2.perso[perso2].currenthealth -= Math.floor(Math.random() * 50);
     }
 
 
@@ -87,7 +79,12 @@ let hit2 = document.querySelector("#hit2");
 
 hit2.addEventListener("click", () => {
 
-
+    // Definition force attaque en fonction du pouvoir
+    // if (objPerso2.pouvoir2 == attaque) {
+    //     objPerso1.perso[perso1].currenthealth -= Math.floor(Math.random() * 30);
+    // } else {
+    objPerso1.perso[perso1].currenthealth -= Math.floor(Math.random() * 20);
+    //}
 
     /// recuperation bar de vie HTML
     let bar1 = document.querySelector(".bar1");
@@ -99,20 +96,6 @@ hit2.addEventListener("click", () => {
         alert("game over")
         window.location.reload(true);
     }
-
-    if (perso2 = "Sangoku") {
-        objPerso1.perso[perso1].currenthealth -= Math.floor(Math.random() * 20);
-    }
-    else if (perso2 = "Vegeta") {
-        objPerso1.perso[perso1].currenthealth -= Math.floor(Math.random() * 25);
-    }
-    else if (perso2 = "Picollo") {
-        objPerso1.perso[perso1].currenthealth -= Math.floor(Math.random() * 30);
-    }
-    else if (perso2 = "Freezer") {
-        objPerso1.perso[perso1].currenthealth -= Math.floor(Math.random() * 35);
-    }
-    
 });
 
 // heal au click
