@@ -51,7 +51,7 @@ h1 {
 .progress {
     width: 300px;
     padding: 2px;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 progress[value]::-webkit-progress-value {
@@ -149,8 +149,8 @@ button {
 }
 
 .log-container {
-    background-color: rgba(156, 156, 156, 0.5);
-    border: solid 3px black;
+    background-color: rgba(233, 233, 233, 0.2);
+    border: solid 3px rgb(46, 45, 45);
     height: 50px;
     overflow: hidden;
     margin: 25px 0 0 ;
