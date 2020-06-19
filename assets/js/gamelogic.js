@@ -302,9 +302,9 @@ function refresh() {
       index = 0
       tour++
     }
-    if (tour == 3) {
+    if (tour == 2) {
         clearInterval(interval)
-        span.textContent = "Lose now..."
+        span.textContent = "hurry up now..."
     }
   }
   
