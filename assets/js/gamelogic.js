@@ -46,7 +46,9 @@ function create() {
 }
 
 
-//Dommage au clic
+//Dommage au clic + attaque amelioree (pouvoir attaque) ou revue a la baisse (pouvoir defense) ou aleatoire
+
+console.log(pouvoir1)
 
 
 let hit1 = document.querySelector("#hit1");
