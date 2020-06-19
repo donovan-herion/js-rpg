@@ -99,15 +99,15 @@ const chosenPower2 = document.getElementById('liste-pouvoirs2')
 chosenPower2.addEventListener("change", () => {
     switch (chosenPower2.value) {
         case 'BoostAttaque':
-            rightImage.src = 'assets/images/fist.png'
+            rightImage.src = 'https://media.giphy.com/media/kMSyCATSq9SEw/giphy.gif'
             break;
         case 'BoostVie':
-            rightImage.src = 'assets/images/stop.png'
+            rightImage.src = 'https://media.giphy.com/media/ZOStzpF9H5syI/giphy.gif'
 
             break;
 
         case 'Aleatoire':
-            rightImage.src = 'assets/images/questionmark.png'
+            rightImage.src = 'https://media.giphy.com/media/hS97mtMUMoKtRwDUNN/giphy.gif'
             break;
 
         default:
@@ -119,15 +119,15 @@ chosenPower2.addEventListener("change", () => {
 chosenPower1.addEventListener("change", () => {
     switch (chosenPower1.value) {
         case 'BoostAttaque':
-            leftImage.src = 'assets/images/fist.png'
+            leftImage.src = 'https://media.giphy.com/media/kMSyCATSq9SEw/giphy.gif'
             break;
         case 'BoostVie':
-            leftImage.src = 'assets/images/stop.png'
+            leftImage.src = 'https://media.giphy.com/media/ZOStzpF9H5syI/giphy.gif'
 
             break;
 
         case 'Aleatoire':
-            leftImage.src = 'assets/images/questionmark.png'
+            leftImage.src = 'https://media.giphy.com/media/hS97mtMUMoKtRwDUNN/giphy.gif'
 
             break;
 

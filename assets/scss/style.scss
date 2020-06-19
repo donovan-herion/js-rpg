@@ -58,10 +58,22 @@ h1 {
 .progress {
     width: 300px;
     padding: 2px;
-    background-color: white;
     border: 1px solid black;
-    text-align: center;
 }
+
+progress[value]::-webkit-progress-value {
+    background-image:
+         -webkit-linear-gradient(-45deg, 
+                                 transparent 33%, rgba(0, 0, 0, .1) 33%, 
+                                 rgba(0,0, 0, .1) 66%, transparent 66%),
+         -webkit-linear-gradient(top, 
+                                 rgba(255, 255, 255, .25), 
+                                 rgba(0, 0, 0, .25)),
+         -webkit-linear-gradient(left, #09c, #f44);
+  
+      border-radius: 2px; 
+      background-size: 35px 20px, 100% 100%, 100% 100%;
+  }
 
 .sub-flex {
     width: 50%;
@@ -114,16 +126,16 @@ button {
 .image-left {
     position: absolute;
     width: 150px;
-    left: 35vw;
-    bottom: 45vh;
+    left: 38vw;
+    bottom: 50vh;
     border-radius: 50%;
 }
 
 .image-right {
     position: absolute;
     width: 150px;
-    right: 35vw;
-    bottom: 45vh;
+    right: 38vw;
+    bottom: 50vh;
     border-radius: 50%;
 }
 

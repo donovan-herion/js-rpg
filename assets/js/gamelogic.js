@@ -112,6 +112,10 @@ hit2.addEventListener("click", () => {
         alert("game over")
         window.location.reload(true);
     }
+
+    if (objPerso1.perso[perso1].currenthealth <= 70) {
+        
+    }
 });
 
 // heal au click
@@ -211,17 +215,41 @@ function blockRight() {
 
 
 //Log
-let actionBtn = document.querySelectorAll(".log");
+let hitBtn1 = document.querySelector("#hit1");
+let hitBtn2 = document.querySelector("#hit2");
+let healBtn1 = document.querySelector("#heal1");
+let healBtn2 = document.querySelector("#heal2");
 
-let message = ["hit1", "heal1", "hit2", "heal2"]
+console.log(hitBtn1)
+console.log(hitBtn2)
+console.log(healBtn1)
+console.log(healBtn2)
 
 let logContainer = document.querySelector(".log-container")
 
-for (let i = 0; i < actionBtn.length; i++) {
-    actionBtn[i].addEventListener("click", () => {
-        let p = document.createElement("p");
-        p.innerHTML = `${message[i]} afficher message complet`;
-        logContainer.prepend(p);
+hitBtn1.addEventListener("click", () => {
+    
+    let p = document.createElement("p");
+    p.innerHTML = `${perso1} inflige des points de degats a son adversaire`;
+    logContainer.prepend(p);
+})
 
-    })
-}
+hitBtn2.addEventListener("click", () => {
+    
+    let p = document.createElement("p");
+    p.innerHTML = `${perso2} inflige des points de degats a son adversaire`;
+    logContainer.prepend(p);
+})
+
+
+healBtn1.addEventListener("click", () => {
+    let p = document.createElement("p");
+    p.innerHTML = `${perso1} se regenere de ... points`;
+    logContainer.prepend(p);
+})
+
+healBtn2.addEventListener("click", () => {
+    let p = document.createElement("p");
+    p.innerHTML = `${perso2} se regenere de ... points`;
+    logContainer.prepend(p);
+})
