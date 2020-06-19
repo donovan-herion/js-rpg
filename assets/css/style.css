@@ -3,6 +3,7 @@
   src: url("../font/Saiyan-Sans.ttf"); }
 
 body {
+  background-image: url(https://vignette.wikia.nocookie.net/murderseries/images/f/f5/Arena.png/revision/latest?cb=20180620180533);
   background-size: cover; }
 
 h1 {
@@ -119,10 +120,11 @@ button {
   background-size: contain; }
 
 .log-container {
-  border: solid 3px #333;
-  height: 60px;
-  overflow: scroll;
-  margin: 15px 0 0;
+  background-color: rgba(156, 156, 156, 0.5);
+  border: solid 3px black;
+  height: 50px;
+  overflow: hidden;
+  margin: 25px 0 0;
   text-align: center;
   padding: 5px; }
   .log-container p {

@@ -18,6 +18,8 @@ btn.addEventListener("click", () => {
 
         disapear.style.display = 'none'
         appear.style.display = 'block'
+    } else {
+        alert('Selectionnez un personnage et un pouvoir')
     }
 })
 
