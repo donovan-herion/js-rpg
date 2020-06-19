@@ -6,11 +6,11 @@ let btn = document.getElementById('run')
 
 btn.addEventListener("click", () => {
     let perso1 = document.getElementById("liste-persos1").value;
-    let pouvoir1 = document.getElementById("liste-pouvoirs1").value;
+    let pouvoirPerso1 = document.getElementById("liste-pouvoirs1").value;
     let perso2 = document.getElementById("liste-persos2").value;
-    let pouvoir2 = document.getElementById("liste-pouvoirs2").value;
+    let pouvoirPerso2 = document.getElementById("liste-pouvoirs2").value;
 
-    if (perso1 != "" && pouvoir1 != "" && perso2 != "" && pouvoir2 != "") {
+    if (perso1 != "" && pouvoirPerso1 != "" && perso2 != "" && pouvoirPerso2 != "") {
         create()
 
         let disapear = document.querySelector('.disapear')
@@ -20,21 +20,29 @@ btn.addEventListener("click", () => {
         appear.style.display = 'block'
     }
 })
+
+
 let perso1
-let pouvoir1
+let pouvoirPerso1
 let perso2
-let pouvoir2
+let pouvoirPerso2
+
+let BonusAttaqueJoueur1
+let BonusAttaqueJoueur2
+let BonusDefenseJoueur1
+let BonusDefenseJoueur2
+
 function create() {
 
     ///recuperation valeur personage+ pouvoir
     perso1 = document.getElementById("liste-persos1").value;
-    pouvoir1 = document.getElementById("liste-pouvoirs1").value;
+    pouvoirPerso1 = document.getElementById("liste-pouvoirs1").value;
     perso2 = document.getElementById("liste-persos2").value;
-    pouvoir2 = document.getElementById("liste-pouvoirs2").value;
+    pouvoirPerso2 = document.getElementById("liste-pouvoirs2").value;
 
     /// creation personage
-    objPerso1 = new Person(perso1, pouvoir1);
-    objPerso2 = new Person(perso2, pouvoir2);
+    objPerso1 = new Person(perso1, pouvoirPerso1);
+    objPerso2 = new Person(perso2, pouvoirPerso2);
 
     /// recuperation bar de vie HTML
     let bar1 = document.querySelector(".bar1");
@@ -43,12 +51,34 @@ function create() {
     ///affichage vie
     bar1.setAttribute("value", objPerso1.perso[perso1].currenthealth);
     bar2.setAttribute("value", objPerso2.perso[perso2].currenthealth);
+
+    //attribuer les bonus de pouvoir a chaque joueur
+
+    if (pouvoirPerso1 == 'BoostAttaque') {
+        BonusAttaqueJoueur1 = 5
+        BonusDefenseJoueur1 = 0
+    } else if (pouvoirPerso1 == 'BoostVie') {
+        BonusDefenseJoueur1 = 5
+        BonusAttaqueJoueur1 = 0
+    } else if (pouvoirPerso1 = 'Aleatoire') {
+        BonusAttaqueJoueur1 = Math.floor(Math.random()*5)
+        BonusDefenseJoueur1 = Math.floor(Math.random()*5)
+    }
+
+    if (pouvoirPerso2 == 'BoostAttaque') {
+        BonusAttaqueJoueur2 = 5
+        BonusDefenseJoueur2 = 0
+    } else if (pouvoirPerso2 == 'BoostVie') {
+        BonusDefenseJoueur2 = 5
+        BonusAttaqueJoueur2 = 0
+    } else if (pouvoirPerso2 = 'Aleatoire') {
+        BonusAttaqueJoueur2 = Math.floor(Math.random()*5)
+        BonusDefenseJoueur2 = Math.floor(Math.random()*5)
+    }
 }
 
 
-//Dommage au clic + attaque amelioree (pouvoir attaque) ou revue a la baisse (pouvoir defense) ou aleatoire
-
-console.log(pouvoir1)
+//Dommage au clic
 
 let previous
 let hit1 = document.querySelector("#hit1");
@@ -56,16 +86,16 @@ let hit1 = document.querySelector("#hit1");
 hit1.addEventListener("click", () => {
     previous = objPerso2.perso[perso2].currenthealth
     if (perso1 == "Sangoku") {
-        objPerso2.perso[perso2].currenthealth -= Math.floor(Math.random() * 20);
+        objPerso2.perso[perso2].currenthealth -= Math.floor(Math.random() * 20) + BonusAttaqueJoueur1;
         console.log("Vie perso 2 =" + objPerso2.perso[perso2].currenthealth + "sangoku attaque perso 2")
     } else if (perso1 == "Vegeta") {
-        objPerso2.perso[perso2].currenthealth -= Math.floor(Math.random() * 22);
+        objPerso2.perso[perso2].currenthealth -= Math.floor(Math.random() * 22) + BonusAttaqueJoueur1;
         console.log("Vie perso 2 =" + objPerso2.perso[perso2].currenthealth + "Vegeta attaque perso 2")
     } else if (perso1 == "Picollo") {
-        objPerso2.perso[perso2].currenthealth -= Math.floor(Math.random() * 24);
+        objPerso2.perso[perso2].currenthealth -= Math.floor(Math.random() * 24) + BonusAttaqueJoueur1;
         console.log("Vie perso 2 =" + objPerso2.perso[perso2].currenthealth + "Picollo attaque perso 2")
     } else if (perso1 == "Freezer") {
-        objPerso2.perso[perso2].currenthealth -= Math.floor(Math.random() * 26);
+        objPerso2.perso[perso2].currenthealth -= Math.floor(Math.random() * 26) + BonusAttaqueJoueur1;
         console.log("Vie perso 2 =" + objPerso2.perso[perso2].currenthealth + "Freezer attaque perso 2")
     }
 
@@ -75,15 +105,12 @@ hit1.addEventListener("click", () => {
     ///affichage vie
     bar2.setAttribute("value", objPerso2.perso[perso2].currenthealth);
 
+    //Game over
     if (objPerso2.perso[perso2].currenthealth <= 0) {
         console.log(objPerso2);
-        alert("game over")
+        alert("Game Over! " + perso1 + " gagne la partie!")
         window.location.reload(true);
     }
-
-
-
-
 });
 
 
@@ -92,16 +119,16 @@ let hit2 = document.querySelector("#hit2");
 hit2.addEventListener("click", () => {
     previous = objPerso1.perso[perso1].currenthealth
     if (perso2 == "Sangoku") {
-        objPerso1.perso[perso1].currenthealth -= Math.floor(Math.random() * 20);
+        objPerso1.perso[perso1].currenthealth -= Math.floor(Math.random() * 20) + BonusAttaqueJoueur2;
         console.log("Vie perso 1 =" + objPerso1.perso[perso1].currenthealth + "Sangoku attaque perso 1")
     } else if (perso2 == "Vegeta") {
-        objPerso1.perso[perso1].currenthealth -= Math.floor(Math.random() * 22);
+        objPerso1.perso[perso1].currenthealth -= Math.floor(Math.random() * 22) + BonusAttaqueJoueur2;
         console.log("Vie perso 1 =" + objPerso1.perso[perso1].currenthealth + "Vegeta attaque perso 1")
     } else if (perso2 == "Picollo") {
-        objPerso1.perso[perso1].currenthealth -= Math.floor(Math.random() * 24);
+        objPerso1.perso[perso1].currenthealth -= Math.floor(Math.random() * 24) + BonusAttaqueJoueur2;
         console.log("Vie perso 1 =" + objPerso1.perso[perso1].currenthealth + "Picollo attaque perso 1")
     } else if (perso2 == "Freezer") {
-        objPerso1.perso[perso1].currenthealth -= Math.floor(Math.random() * 26);
+        objPerso1.perso[perso1].currenthealth -= Math.floor(Math.random() * 26) + BonusAttaqueJoueur2;
         console.log("Vie perso 1 =" + objPerso1.perso[perso1].currenthealth + "Freezer attaque perso 1")
     }
 
@@ -112,7 +139,7 @@ hit2.addEventListener("click", () => {
     bar1.setAttribute("value", objPerso1.perso[perso1].currenthealth);
 
     if (objPerso1.perso[perso1].currenthealth <= 0) {
-        alert("game over")
+        alert("Game Over! " + perso2 + " gagne la partie!")
         window.location.reload(true);
     }
 
@@ -127,7 +154,8 @@ let heal1 = document.querySelector("#heal1");
 
 heal1.addEventListener("click", () => {
     previous = objPerso1.perso[perso1].currenthealth
-    objPerso1.perso[perso1].currenthealth += Math.floor(Math.random() * 30);
+    objPerso1.perso[perso1].currenthealth += Math.floor(Math.random() * 30) + BonusDefenseJoueur1  
+    //je rajoute 5 a la main et je reduis le random a 25 car si le joueur 2 choisi la vie je pourrais potentiellement me retaper de -5
 
     /// recuperation bar de vie HTML
     let bar1 = document.querySelector(".bar1");
@@ -145,14 +173,8 @@ let heal2 = document.querySelector("#heal2");
 
 heal2.addEventListener("click", () => {
     previous = objPerso2.perso[perso2].currenthealth
-    // Definition points de regeneration au clic en fonction du pouvoir
-    // if (objPerso2.pouvoir2 == defense) {
-    //     objPerso2.perso[perso2].currenthealth += Math.floor(Math.random() * 40);
-
-    // } else {
-    objPerso2.perso[perso2].currenthealth += Math.floor(Math.random() * 30);
-    // }
-
+    objPerso2.perso[perso2].currenthealth += Math.floor(Math.random() * 30) + BonusDefenseJoueur2
+    //je rajoute 5 a la main et je reduis le random a 25 car si le joueur 1 choisi la vie je pourrais potentiellement me retaper de -5
     /// recuperation bar de vie HTML
     let bar2 = document.querySelector(".bar2");
 
@@ -163,7 +185,7 @@ heal2.addEventListener("click", () => {
         objPerso2.perso[perso2].currenthealth = 100;
         console.log(objPerso2.perso[perso2].currenthealth + "joueur 2")
 
-    }
+    } 
 
 
 
@@ -244,7 +266,7 @@ hitBtn1.addEventListener("click", () => {
 hitBtn2.addEventListener("click", () => {
     
     let p = document.createElement("p");
-    p.innerHTML = `${perso2} inflige  ${previous - objPerso1.perso[perso1].currenthealth} points de degats a ${perso2}`;
+    p.innerHTML = `${perso2} inflige  ${previous - objPerso1.perso[perso1].currenthealth} points de degats a ${perso1}`;
     logContainer.prepend(p);
 })
 
