@@ -89,16 +89,12 @@ hit1.addEventListener("click", () => {
     previous = objPerso2.perso[perso2].currenthealth
     if (perso1 == "Sangoku") {
         objPerso2.perso[perso2].currenthealth -= Math.floor(Math.random() * 20) + BonusAttaqueJoueur1;
-        console.log("Vie perso 2 =" + objPerso2.perso[perso2].currenthealth + "sangoku attaque perso 2")
     } else if (perso1 == "Vegeta") {
         objPerso2.perso[perso2].currenthealth -= Math.floor(Math.random() * 22) + BonusAttaqueJoueur1;
-        console.log("Vie perso 2 =" + objPerso2.perso[perso2].currenthealth + "Vegeta attaque perso 2")
     } else if (perso1 == "Picollo") {
         objPerso2.perso[perso2].currenthealth -= Math.floor(Math.random() * 24) + BonusAttaqueJoueur1;
-        console.log("Vie perso 2 =" + objPerso2.perso[perso2].currenthealth + "Picollo attaque perso 2")
     } else if (perso1 == "Freezer") {
         objPerso2.perso[perso2].currenthealth -= Math.floor(Math.random() * 26) + BonusAttaqueJoueur1;
-        console.log("Vie perso 2 =" + objPerso2.perso[perso2].currenthealth + "Freezer attaque perso 2")
     }
 
     /// recuperation bar de vie HTML
@@ -122,16 +118,12 @@ hit2.addEventListener("click", () => {
     previous = objPerso1.perso[perso1].currenthealth
     if (perso2 == "Sangoku") {
         objPerso1.perso[perso1].currenthealth -= Math.floor(Math.random() * 20) + BonusAttaqueJoueur2;
-        console.log("Vie perso 1 =" + objPerso1.perso[perso1].currenthealth + "Sangoku attaque perso 1")
     } else if (perso2 == "Vegeta") {
         objPerso1.perso[perso1].currenthealth -= Math.floor(Math.random() * 22) + BonusAttaqueJoueur2;
-        console.log("Vie perso 1 =" + objPerso1.perso[perso1].currenthealth + "Vegeta attaque perso 1")
     } else if (perso2 == "Picollo") {
         objPerso1.perso[perso1].currenthealth -= Math.floor(Math.random() * 24) + BonusAttaqueJoueur2;
-        console.log("Vie perso 1 =" + objPerso1.perso[perso1].currenthealth + "Picollo attaque perso 1")
     } else if (perso2 == "Freezer") {
         objPerso1.perso[perso1].currenthealth -= Math.floor(Math.random() * 26) + BonusAttaqueJoueur2;
-        console.log("Vie perso 1 =" + objPerso1.perso[perso1].currenthealth + "Freezer attaque perso 1")
     }
 
     /// recuperation bar de vie HTML
@@ -284,3 +276,38 @@ healBtn2.addEventListener("click", () => {
     p.innerHTML = `${perso2} se regenere de ${objPerso2.perso[perso2].currenthealth - previous}  points`;
     logContainer.prepend(p);
 })
+
+
+//animation titre page du combat
+let span = document.getElementById('letters')
+
+let words = ["Fight", "Win", "Play", "Triumph"]
+
+let i = 0 
+let index = 0
+let tour = 0
+
+function refresh() {
+    let letter = words[index].split("")
+    span.textContent += letter[i]
+  
+  
+    if (i == letter.length) {
+      index++
+      i = 0
+      span.textContent = ""
+    } else i++
+  
+    if (index === words.length) {
+      index = 0
+      tour++
+    }
+    if (tour == 3) {
+        clearInterval(interval)
+        span.textContent = "Lose now..."
+    }
+  }
+  
+  
+  
+  let interval = setInterval(refresh, 600)

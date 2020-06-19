@@ -102,16 +102,13 @@ chosenPower2.addEventListener("change", () => {
             rightImage.src = 'https://media.giphy.com/media/kMSyCATSq9SEw/giphy.gif'
             break;
         case 'BoostVie':
-            rightImage.src = 'https://media.giphy.com/media/ZOStzpF9H5syI/giphy.gif'
-
+            rightImage.src = 'https://media.giphy.com/media/BIuuwHRNKs15C/giphy.gif'
             break;
-
         case 'Aleatoire':
-            rightImage.src = 'https://media.giphy.com/media/hS97mtMUMoKtRwDUNN/giphy.gif'
+            rightImage.src = 'https://media.giphy.com/media/RgznPz6wEmkUPe4miC/giphy.gif'
             break;
-
         default:
-            rightSection.style.backgroundImage = 'none'
+            rightImage.src = ''
             break;
     }
 })
@@ -122,18 +119,13 @@ chosenPower1.addEventListener("change", () => {
             leftImage.src = 'https://media.giphy.com/media/kMSyCATSq9SEw/giphy.gif'
             break;
         case 'BoostVie':
-            leftImage.src = 'https://media.giphy.com/media/ZOStzpF9H5syI/giphy.gif'
-
+            leftImage.src = 'https://media.giphy.com/media/BIuuwHRNKs15C/giphy.gif'
             break;
-
         case 'Aleatoire':
-            leftImage.src = 'https://media.giphy.com/media/hS97mtMUMoKtRwDUNN/giphy.gif'
-
+            leftImage.src = 'https://media.giphy.com/media/RgznPz6wEmkUPe4miC/giphy.gif'
             break;
-
         default:
-            leftSection.style.backgroundImage = 'none'
-
+            leftImage.src = ''
             break;
     }
 })
