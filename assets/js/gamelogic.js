@@ -70,20 +70,16 @@ const chosenPower2 = document.getElementById('liste-pouvoirs2')
 
 chosenPower2.addEventListener("change", () => {
     switch (chosenPower2.value) {
-        case 'Attaque 120%':
+        case 'Attaque Boost':
             rightImage.src = 'assets/images/fist.png'
             console.log('worked')
             break;
-        case 'Défense 120%':
+        case 'Défense Boost':
             rightImage.src = 'assets/images/stop.png'
             console.log('worked')
 
             break;
-        case 'Intouchable 30%':
-            rightImage.src = 'assets/images/tele.png'
-            console.log('worked')
 
-            break;
         case 'Aleatoire':
             rightImage.src = 'assets/images/questionmark.png'
             console.log('worked')
@@ -100,20 +96,16 @@ chosenPower2.addEventListener("change", () => {
 
 chosenPower1.addEventListener("change", () => {
     switch (chosenPower1.value) {
-        case 'Attaque 120%':
+        case 'Attaque Boost':
             leftImage.src = 'assets/images/fist.png'
             console.log('worked')
             break;
-        case 'Défense 120%':
+        case 'Défense Boost':
             leftImage.src = 'assets/images/stop.png'
             console.log('worked')
 
             break;
-        case 'Intouchable 30%':
-            leftImage.src = 'assets/images/tele.png'
-            console.log('worked')
 
-            break;
         case 'Aleatoire':
             leftImage.src = 'assets/images/questionmark.png'
             console.log('worked')
@@ -256,17 +248,30 @@ hit1.addEventListener("click", () => {
     ///affichage vie
     bar2.setAttribute("value", objPerso2.currenthealth);
 
+
+
     console.log(objPerso2);
+
+
+    if (objPerso2.currenthealth <= 0) {
+        console.log(objPerso2);
+        alert("game over")
+        window.location.reload(true);
+    }
+
 
 
 });
 
-
 let hit2 = document.querySelector("#hit2");
 
 hit2.addEventListener("click", () => {
-    objPerso1.currenthealth -= Math.floor(Math.random() * 20);
-    console.log(objPerso1.currenthealth)
+    if (objPerso2.pouvoir2 == attaque) {
+        objPerso1.currenthealth -= Math.floor(Math.random() * 30);
+    } else {
+
+        objPerso1.currenthealth -= Math.floor(Math.random() * 20);
+    }
 
     /// recuperation bar de vie HTML
     let bar1 = document.querySelector(".bar1");
@@ -274,8 +279,11 @@ hit2.addEventListener("click", () => {
     ///affichage vie
     bar1.setAttribute("value", objPerso1.currenthealth);
 
-    console.log(objPerso1);
+    if (objPerso1.currenthealth <= 0) {
 
+        alert("game over")
+        window.location.reload(true);
+    }
 });
 
 // heal au click
@@ -293,6 +301,13 @@ heal1.addEventListener("click", () => {
     bar1.setAttribute("value", objPerso1.currenthealth);
 
 
+    if (objPerso1.currenthealth >= 100) {
+        objPerso1.currenthealth = 100;
+        console.log(objPerso1.currenthealth + "joueur 1")
+    }
+
+
+
 
 });
 
@@ -300,8 +315,14 @@ heal1.addEventListener("click", () => {
 let heal2 = document.querySelector("#heal2");
 
 heal2.addEventListener("click", () => {
-    objPerso2.currenthealth += Math.floor(Math.random() * 30);
-    console.log(objPerso2.currenthealth)
+
+    if (objPerso2.pouvoir2 == defense) {
+        objPerso2.currenthealth += Math.floor(Math.random() * 40);
+        console.log(objPerso2.currenthealth)
+    } else {
+        objPerso2.currenthealth += Math.floor(Math.random() * 30);
+        console.log(objPerso2.currenthealth)
+    }
 
     /// recuperation bar de vie HTML
     let bar2 = document.querySelector(".bar2");
@@ -309,7 +330,15 @@ heal2.addEventListener("click", () => {
     ///affichage vie
     bar2.setAttribute("value", objPerso2.currenthealth);
 
- 
+
+    if (objPerso2.currenthealth >= 100) {
+        objPerso2.currenthealth = 100;
+        console.log(objPerso2.currenthealth + "joueur 2")
+
+    }
+
+
+
 
 });
 
