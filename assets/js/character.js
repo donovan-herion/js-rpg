@@ -90,8 +90,8 @@ chosenCharacter2.addEventListener("change", () => {
 })
 
 
-const leftImage = document.querySelector(".image-left")
-const rightImage = document.querySelector(".image-right")
+const leftImage = document.querySelector("#left-image")
+const rightImage = document.querySelector("#right-image")
 
 const chosenPower1 = document.getElementById('liste-pouvoirs1')
 const chosenPower2 = document.getElementById('liste-pouvoirs2')
@@ -100,12 +100,15 @@ chosenPower2.addEventListener("change", () => {
     switch (chosenPower2.value) {
         case 'BoostAttaque':
             rightImage.src = 'https://media.giphy.com/media/kMSyCATSq9SEw/giphy.gif'
+            rightImage.classList.add("image-left")
             break;
         case 'BoostVie':
             rightImage.src = 'https://media.giphy.com/media/BIuuwHRNKs15C/giphy.gif'
+            rightImage.classList.add("image-left")
             break;
         case 'Aleatoire':
             rightImage.src = 'https://media.giphy.com/media/RgznPz6wEmkUPe4miC/giphy.gif'
+            rightImage.classList.add("image-left")
             break;
         default:
             rightImage.src = ''
@@ -117,12 +120,15 @@ chosenPower1.addEventListener("change", () => {
     switch (chosenPower1.value) {
         case 'BoostAttaque':
             leftImage.src = 'https://media.giphy.com/media/kMSyCATSq9SEw/giphy.gif'
+            leftImage.classList.add("image-right")
             break;
         case 'BoostVie':
             leftImage.src = 'https://media.giphy.com/media/BIuuwHRNKs15C/giphy.gif'
+            leftImage.classList.add("image-right")
             break;
         case 'Aleatoire':
             leftImage.src = 'https://media.giphy.com/media/RgznPz6wEmkUPe4miC/giphy.gif'
+            leftImage.classList.add("image-right")
             break;
         default:
             leftImage.src = ''
